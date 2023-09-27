@@ -1,0 +1,31 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Login Page</title>
+    <link rel="stylesheet" href="{% static 'css/login.css' %}"> <!-- Add a CSS file for styling (optional) -->
+</head>
+
+<body>
+    <div class="login-container">
+        <h2>Login</h2>
+        <form action="your_backend_login_endpoint" method="post">
+            <div class="input-group">
+                <input type="text" class="login-input" name="username" placeholder="Username" required>
+            </div>
+            <div class="input-group">
+                <input type="password" class="login-input" name="password" placeholder="Password" required>
+            </div>
+            <button type="submit" class="login-button">Login</button>
+        </form>
+
+        
+        <p class="alternative">Don't have an account? <a href="{% url 'registration' %}">Sign Up</a></p>
+    </div>
+</body>
+
+</html>
